@@ -1,0 +1,36 @@
+@charset="UTF-8";
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.rect{
+	width: 400px;
+	height: 200px;
+	background: #ccc;
+	position: absolute;
+    margin: auto;
+    top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+.circle1{
+	width: 100px;
+	height: 100px;
+	background: #fc0;
+	border-radius: 100px;
+	margin-left: -50px;
+	margin-top: -50px;
+	position: absolute;
+	clip: rect(50px,100px,100px,50px);
+}
+.circle2{
+	width: 100px;
+	height: 100px;
+	background: #fc0;
+	border-radius: 100px;
+	margin-left: 350px;
+	margin-top: 150px;
+	position: absolute;
+	clip: rect(0px,50px,50px,0px);
+}
