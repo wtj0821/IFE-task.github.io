@@ -1,0 +1,119 @@
+@charset="UTF-8";
+body{
+	font-family: "叶根友毛笔行书2.0版";
+}
+a{
+	text-decoration: none;
+}
+.container{
+	width: 500px;
+	height: 342px;
+	overflow: hidden;
+	position: relative;
+	margin: 100px auto;
+}
+.content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+.content h1{
+	margin-top: 70px;
+	background-size: 200% 100%;
+	background-image: -webkit-linear-gradient(left,#F69D9D,#FFEAB6 25%,#FDFFBA 50%,#C0FFC2 75%,#F69D9D 100%);
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: stream 5s infinite linear;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.content a{
+	width: 100%;
+	text-align: center;
+	display: block;
+	font-size: 24px;
+	color: #fff;
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.content::before{
+	content: "";
+	display: block;
+	width: 80%;
+	height: 80%;
+	border-top: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	box-sizing: border-box;
+	transform: scale(0,1);
+	transition: all 0.5s;
+}
+.content::after {
+	content: '';
+	display: block;
+	width: 80%;
+	height: 80%;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	box-sizing: border-box;
+	transform: scale(1,0);
+	transition: all 0.5s;
+}
+.container:hover img{
+	_webkit-filter: blur(6px);
+	filter: blur(6px);
+}
+.container:hover .content::before {
+	transform: scale(1,1);
+	transition: all 0.5s;
+}
+.container:hover .content::after {
+	transform: scale(1,1);
+	transition: all 0.5s;
+}
+.container:hover .content h1 {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: all 0.5s;
+}
+.container:hover .content a {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: all 0.5s;
+	animation: changecol 3s linear;
+}
+@keyframes stream{
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+@keyframes changecol{
+	0%{
+		color: #F69D9D;
+	}
+	25%{
+		color: #FFEAB6;
+	}
+	50%{
+		color: #FDFFBA;
+	}
+	75%{
+		color: #C0FFC2;
+	}
+	100%{
+		color: #D1EBFE;
+	}
+}
