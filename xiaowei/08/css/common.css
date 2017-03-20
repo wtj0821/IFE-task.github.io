@@ -1,0 +1,25 @@
+@charset="UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	border:1px solid gray;
+	padding:10px;
+}
+[class*='col-']{
+	box-sizing: border-box;
+	float:left;
+	background-color: #eee;
+	border:1px solid #999;
+	height:50px;
+	margin:10px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 50px;
+}
+.row:before,.row:after{
+	content:"";
+	display:table;
+	clear:both;
+}

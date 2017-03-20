@@ -1,0 +1,16 @@
+@charset="UTF-8";
+.col-sm-2{
+	width:calc(16.667% - (20px + 1px));
+}
+.col-sm-3{
+	width:calc(25% - (20px + 1px));
+}
+.col-sm-6{
+	width:calc(50% - (20px + 1px));
+}
+.col-sm-8{
+	width:calc(66.666% - (20px + 1px));
+}
+.col-sm-12{
+	width:calc(100% - (20px + 1px));
+}
